@@ -1,0 +1,1232 @@
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] 0
+Collections Recovery Report has been updated 
+Press any key to continue . . . -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-26 15:21:24"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-26 17:48:42"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-27 00:05:00"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+Error in date_frame_2 %>% filter(level == "Weekly") %>% group_by(date_frame) %>%  : 
+  could not find function "%>%<-"
+Execution halted
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-27 09:49:01"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-27 14:28:46"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-05-28 00:04:41"
+-- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.3     v purrr   0.3.4
+v tibble  3.1.0     v dplyr   1.0.6
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql
+
+
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test
+
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+-- Attaching packages -------------------------------------- tidymodels 0.1.3 --
+v broom        0.7.6      v rsample      0.1.0 
+v dials        0.0.9      v tune         0.1.5 
+v infer        0.5.4      v workflows    0.2.2 
+v modeldata    0.1.0      v workflowsets 0.0.2 
+v parsnip      0.1.5      v yardstick    0.0.8 
+v recipes      0.1.16     
+-- Conflicts ----------------------------------------- tidymodels_conflicts() --
+x scales::discard() masks purrr::discard()
+x plotly::filter()  masks dplyr::filter(), stats::filter()
+x recipes::fixed()  masks stringr::fixed()
+x dbplyr::ident()   masks dplyr::ident()
+x dplyr::lag()      masks stats::lag()
+x yardstick::spec() masks readr::spec()
+x dbplyr::sql()     masks dplyr::sql()
+x recipes::step()   masks stats::step()
+* Use tidymodels_prefer() to resolve common conflicts.
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+
+Attaching package: 'zoo'
+
+The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric
+
+There were 21 warnings (use warnings() to see them)
+
+-- Column specification --------------------------------------------------------
+cols(
+  .default = col_character(),
+  EFT = col_logical(),
+  InArrangement = col_logical(),
+  RUFlag = col_logical(),
+  ContractualAttempt = col_logical(),
+  ACHChangeNumberofDrawsStep1 = col_double(),
+  ACHChangeNumberofDrawsStep2 = col_double(),
+  ACHChangeNumberofDrawsStep3 = col_double(),
+  ACHChangeNumberofDrawsStep4 = col_double(),
+  ACHChangeNumberofDrawsStep5 = col_double(),
+  ACHChangeTotalDrawsStep5 = col_logical(),
+  ACHChangeNumberofDrawsStep6 = col_double(),
+  ACHChangeNumberofDrawsStep7 = col_logical(),
+  ACHChangeDrawAmountStep7 = col_logical(),
+  ACHChangeFrequencyStep7Value = col_logical(),
+  ACHChangeStartDateStep7 = col_logical(),
+  ACHChangeEndDateStep7 = col_logical(),
+  ACHChangeNumberofDrawsStep8 = col_logical(),
+  ACHChangeDrawAmountStep8 = col_logical(),
+  ACHChangeFrequencyStep8Value = col_logical(),
+  ACHChangeStartDateStep8 = col_logical()
+  # ... with 12 more columns
+)
+i Use `spec()` for the full column specifications.
+
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+Joining, by = c("account_identifier", "ru_flag", "Step")
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'account_identifier', 'Step'. You can override using the `.groups` argument.
+New names:
+* `` -> ...7
+* `` -> ...8
+* `` -> ...9
+* `` -> ...10
+* `` -> ...11
+Warning messages:
+1: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in J1096 / R1096C10: got 'this'is'
+2: In read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet,  :
+  Expecting logical in K1096 / R1096C11: got 'this''is'
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'contract_id'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'date'. You can override using the `.groups` argument.
+[1] "The Collections Recovery Report has been updated at  2021-06-02 00:07:00"
