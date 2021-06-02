@@ -1,8 +1,7 @@
 #This script is used to manage the scheduled scripts 
 source('S:/Risk Analytics/Configurations/config.r')
 library(taskscheduleR) 
-### TEst 
-### Newets of the Changes
+
 
 taskscheduler_create(taskname = "third_party_data", 
                      rscript = 'S:/Risk Analytics/Automated Scripts/get_attribute_reports/get_attribute_reports.r', 
